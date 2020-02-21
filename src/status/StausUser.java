@@ -9,20 +9,28 @@ package status;
  *
  * @author srinivsi
  */
+enum code{
+    REJECTED,PENDING,PROCESSING,APPROVED}
 public class StausUser 
+{code code;
+        public StausUser(code code)
+        {this.code=code;
+
+}
+   public void statusDetail()
 {
-   public void statusDetail(String code)
-{
-switch(code.toUpperCase())
+switch(code)
         {
-        case "ZERO": System.out.println("REJECTED");
+    
+    case ZERO: 
+            System.out.println("REJECTED");
         break;
-        case "ONE": System.out.println("PENDING");
+        case ONE: System.out.println("PENDING");
         break;
-        case "TWO":
+        case TWO:
         System.out.println("PROCESSING");
         break;
-        case "THREE": 
+        case THREE: 
             System.out.println("APPROVED");
         break;
         default:
